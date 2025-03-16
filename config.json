@@ -1,0 +1,9 @@
+{
+    "host": "localhost",
+    "port": 59561,
+    "staticUsername": "inovr",
+    "usernameLength": 5,
+    "usernamePattern": "gnus7",
+    "connectSpam": false,
+    "commandPrefix": "!"
+}
