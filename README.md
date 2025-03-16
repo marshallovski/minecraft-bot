@@ -1,5 +1,7 @@
 # minecraft-bot
  Simple Minecraft bot with commands and command handler.
+ 
+ Supported Minecraft versions: **1.7.10-1.24.1** (and possibly newer, depends on a `minecraft-protocol` library).
 
  # Commands
  Default command prefix is `!`, but you can change it in `config.json` file.
