@@ -17,11 +17,11 @@ const client = mc.createClient({
     profilesFolder: './profiles/'
 });
 
+await commandHandler(client, './commands');
 autoVersionForge(client);
 
 client.on('connect', async () => {
     console.log(`Connected to ${host}:${port} (version: ${client.version})`);
-    await commandHandler(client, './commands');
 });
 
 client.on('login', async () => console.log(`Logged in as "${client.username}" (UUID: ${client.uuid})`));

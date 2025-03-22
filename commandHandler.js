@@ -4,9 +4,9 @@ import chatMessage from "./utils/chatMessage.js";
 import * as _config from "./config.json" with { type: 'json' };
 const config = _config.default;
 
-async function commandHandler(client, commandsFolder) {
-    const commands = {};
+const commands = {};
 
+async function commandHandler(client, commandsFolder) {
     try {
         const files = await new Promise((resolve, reject) => {
             readdir(commandsFolder, {}, async (err, files) => {
@@ -25,9 +25,9 @@ async function commandHandler(client, commandsFolder) {
             } catch (importErr) {
                 console.error(`[commandHandler]: error importing ${f}:`, importErr);
             }
-        });
+        });        
 
-        await Promise.all(commandPromises);
+        await Promise.all(commandPromises);        
 
         client.on('playerChat', async (ev) => {
             const message = await chatMessage(client, ev);
@@ -59,4 +59,4 @@ async function commandHandler(client, commandsFolder) {
     }
 }
 
-export { commandHandler };
+export { commandHandler, commands };
